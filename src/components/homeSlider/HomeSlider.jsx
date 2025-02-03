@@ -37,7 +37,7 @@ const HomeSlider = () => {
             <SwiperSlide>
               <div className="item rounded-[20px] overflow-hidden">
                 <img
-                  src="//images1/home-2.jpg"
+                  src="/images1/home-2.jpg"
                   alt="Image 2"
                   className="w-full  h-[600px] object-fit: cover"
                 />
