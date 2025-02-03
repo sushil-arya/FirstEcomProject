@@ -18,7 +18,8 @@ import { Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 
 
-import BlogItem from "../../components/BlogItem/BlogItem";
+import BlogItem from "../../components/blogItem/BlogItem";
+
 import Footer from "../../components/footer/Footer";
 
 

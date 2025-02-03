@@ -32,4 +32,4 @@ const BlogItem = () => {
   )
 }
 
-export default BlogItem
+export default BlogItem;
