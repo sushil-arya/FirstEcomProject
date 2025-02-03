@@ -26,7 +26,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center  flex-col ">
             
               <img
-                src="../src/assets/images_cat/img1.jpg"
+                src="/images_cat/img1.jpg"
                 alt=""
                 className="h-[150px]"
               />
@@ -41,7 +41,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
             
               <img
-                src="../src/assets/images_cat/img2.jpg"
+                src="/images_cat/img2.jpg"
                 alt=""
                 className="h-[150px]"
               />
@@ -56,7 +56,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
             
               <img
-                src="../src/assets/images_cat/img3.jpg"
+                src="/images_cat/img3.jpg"
                 alt=""
                 className="h-[150px]"
               />
@@ -72,7 +72,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
             
               <img
-                src="../src/assets/images_cat/img4.jpg"
+                src="/images_cat/img4.jpg"
                 alt=""
                 className="h-[150px]"
               />
@@ -88,7 +88,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
             
               <img
-                src="../src/assets/images_cat/img5.jpg"
+                src="/images_cat/img5.jpg"
                 alt=""
                 className="h-[150px]"
               />
@@ -102,7 +102,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
             
               <img
-                src="../src/assets/images_cat/img6.jpg"
+                src="/images_cat/img6.jpg"
                 alt=""
                 className="h-[150px]"
               />
@@ -116,7 +116,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
             
               <img
-                src="../src/assets/images_cat/img7.jpg"
+                src="/images_cat/img7.jpg"
                 alt=""
                 className="h-[150px]"
               />
@@ -130,7 +130,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
             
               <img
-                src="../src/assets/images_cat/img8.jpg"
+                src="/images_cat/img8.jpg"
                 alt=""
                 className="h-[150px]"
               />
@@ -144,7 +144,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
             
               <img
-                src="../src/assets/images_cat/img9.jpg"
+                src="/images_cat/img9.jpg"
                 alt=""
                 className="h-[150px]"
               />
@@ -158,7 +158,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
             
               <img
-                src="../src/assets/images_cat/img1.jpg"
+                src="/images_cat/img1.jpg"
                 alt=""
                 className="h-[150px]"
               />
