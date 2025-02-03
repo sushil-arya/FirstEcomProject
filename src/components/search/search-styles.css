@@ -1,0 +1,5 @@
+.searchBox input::placeholder{color:#0e2751 !important;}
+
+.searchBox input::-moz-placeholder{color:#0e2751 !important;}
+
+.searchBox input::-webkit-placeholder{color:#0e2751 !important;}
