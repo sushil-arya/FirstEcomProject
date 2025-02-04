@@ -217,7 +217,7 @@ const Footer = () => {
         
               <ul className="flex flex-row gap-5 items-center" >
                 <li><Link to="/" className="text-[22px] hover:text-[#3b5998] " ><FaFacebook className="transition-all ease-in-out hover:-translate-y-1 " /></Link></li>
-                <li><Link to="/" className="text-[26px] hover:text-[#1c2023] " ><AiFillTwitterCircle className="transition-all ease-in-out hover:-translate-y-1 " /></Link></li>
+                <li><Link to="/" className="text-[26px] hover:text-[#1DA1F2] " ><AiFillTwitterCircle className="transition-all ease-in-out hover:-translate-y-1 " /></Link></li>
                 <li><Link to="/" className="text-[21px] hover:text-[#c32aa3] " ><GrInstagram className="transition-all ease-in-out hover:-translate-y-1 " /></Link></li>
                 <li><Link to="/" className="text-[25px] hover:text-[#FF0000] " ><IoLogoYoutube className="transition-all ease-in-out hover:-translate-y-1 " /></Link></li>
                 <li><Link to="/" className="text-[25px] hover:text-[#25d366] " ><IoLogoWhatsapp className="transition-all ease-in-out hover:-translate-y-1 " /></Link></li>
