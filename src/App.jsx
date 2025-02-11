@@ -34,7 +34,7 @@ const App = () => {
                 />} />
 
           {/* need to remove this before final code */}
-          <Route path={"/productdetail"} exact={true} element={<ProductDetail />} />
+          {/* <Route path={"/productlist"} exact={true} element={<ProductDetail />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>

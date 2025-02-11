@@ -38,7 +38,7 @@ const Navigation = () => {
               </Link>
             </li>
             <li className="list-none relative">
-              <Link to="/" className="link transition text-[14px] font-[600]">
+              <Link to="/productlist" className="link transition text-[14px] font-[600]">
               <Button className="!text-[rgba(0,0,0,0.8)] hover:!text-[#1976d2] link">Watch Boxes</Button>
               </Link>
 
@@ -78,7 +78,7 @@ const Navigation = () => {
               </div>
             </li>
             <li className="list-none relative">
-              <Link to="/" className="link transition text-[14px] font-[600]">
+              <Link to="/productDetails/:id" className="link transition text-[14px] font-[600]">
               <Button className="!text-[rgba(0,0,0,0.8)] hover:!text-[#1976d2] link">Bangle boxes</Button>
 
               </Link>
