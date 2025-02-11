@@ -24,14 +24,14 @@ const App = () => {
 
 
           <Route path={"/productDetails/:id"} exact={true} element={<ProductDetails />} />
-          <Route path={"//order-tracking"} exact={true} element={<OrderTrackingProgress />} />
-{/*               
-          <Route path={"//order-tracking"} exact={true} element={<OrderTrackingProgress2 
+          {/* <Route path={"/order-tracking"} exact={true} element={<OrderTrackingProgress />} /> */}
+              
+          <Route path={"/order-tracking"} exact={true} element={<OrderTrackingProgress2 
                   currentStatus="shipped"
                   orderNumber="ORD-2024-3847"
                   carrier="FedEx"
                   trackingNumber="FX123456789"
-                />} /> */}
+                />} />
 
           {/* need to remove this before final code */}
           <Route path={"/productdetail"} exact={true} element={<ProductDetail />} />
