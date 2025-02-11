@@ -1,29 +1,47 @@
-import React from "react";
+import React,{useEffect} from "react";
+
 import HomeSlider from "../../components/homeSlider/HomeSlider";
+import ProductTabs from "../../components/productTabs/ProductTabs";
+import CustomerReviews from "../../components/customerReviews/CustomerReviews";
+import InstagramShop from "../../components/instagramShop/InstagramShop";
 import HomeCatSlider from "../../components/homeCatSlider/HomeCatSlider";
 import { TbTruckDelivery } from "react-icons/tb";
 import AdsBannerSlider from "../../components/adsBannerSlider/AdsBannerSlider";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import ProductsSlider from "../../components/productsSlider/ProductsSlider";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
 // import required modules
 import { Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
-
-
 import BlogItem from "../../components/blogItem/BlogItem";
+import HomeSlider2 from "../../components/homeSlider2/HomeSlider2";
+import BannerBoxV2 from "../../components/bannerBoxV2/BannerBoxV2";
 
-import Footer from "../../components/footer/Footer";
+//animation AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import RelatedProducts from "../../components/relatedProducts/RelatedProducts";
+
+
+import { CartProvider } from '../../context/CartContext';
+import { WishlistProvider } from '../../context/WishlistContext';
+
 
 
 const Home = () => {
+
+  useEffect(() => {
+    AOS.init({
+      disable: "phone",
+      duration: 700,
+      easing: "ease-out-cubic",
+    });
+  }, []);
+
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -31,13 +49,36 @@ const Home = () => {
   };
   return (
     <>
-      <HomeSlider />
+
+      
+
+      {/* Home Slider Version 1 */}
+      {/* <HomeSlider /> */}
+
+
+      {/* Home Slider Version 2 */}
+      <section className="py-6">
+        <div className="container flex gap-5 ">
+            <div className="part1 w-[70%] rounded-md">
+            <HomeSlider2 />
+            </div>
+            <div className="part2 w-[30%] flex items-center gap-5 flex-col">
+              <BannerBoxV2 info = "left" image={'/images1/home-banner-side/img-home-banner-side-1.jpg'} />
+              <BannerBoxV2 info = "right" image={'/images1/home-banner-side/img-home-banner-side-2.jpg'} />
+            </div>
+        </div>
+      </section>
+
+
+
       {/* HomeCategorySlider */}
-      <HomeCatSlider />
+      <HomeCatSlider/>
+
       {/* Popular */}
-      <section className="bg-white py-8">
-        <div className="container">
-          <div className="flex items-center justify-between">
+      <section className="bg-white py-8" >
+        <div className="container" data-aos="fade-up"
+    data-aos-duration="3000" >
+          <div className="flex items-center justify-between" data-aos="zoom-out">
             <div className="leftSec">
               <h2 className="text-[20px] font-[600]">Popular Products</h2>
               <p className="text-[14px] font-[400]">
@@ -69,13 +110,12 @@ const Home = () => {
           </div>
           <ProductsSlider items={5}/>
         </div>
-
-        
       </section>
+
       {/* freeshipping band & ads banner */}
       <section className="py-4 pt-2 bg-white">
         <div className="container">
-          <div className="freeShipping w-[80%] m-auto py-4 p-4 border-2 border-[#1976d2] flex items-center justify-between rounded-md mb-7">
+          <div className="freeShipping w-[80%] m-auto py-4 p-4 border-2 border-[#1976d2] flex items-center justify-between rounded-md mb-7"  data-aos="zoom-out-down">
             <div className="col1 flex items-center gap-4">
               <TbTruckDelivery className="text-[50px]" />
               <span className="text-[20px] font-[600] uppercase">
@@ -98,8 +138,11 @@ const Home = () => {
 
       {/* latest products */}
       <section className="py-5 pt-0 bg-white">
-        <div className="container">
-          <h2 className="text-[20px] font-[600]">Latest Products</h2>
+        <div className="container" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+          <h2 className="text-[20px] font-[600]"  data-aos="fade-up"
+     data-aos-duration="3000"  >Latest Products</h2>
           <ProductsSlider items={6} />
 
           <AdsBannerSlider items={3} />
@@ -117,6 +160,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* product tab */}
+
+      {/* <ProductTabs /> */}
 
       {/* Blog section */}
 
@@ -164,7 +210,21 @@ const Home = () => {
         </div>
       </section>
 
-      <Footer />
+      {/* <CustomerReviews /> */}
+
+      {/* Instagram Shop */}
+      {/* <InstagramShop /> */}
+
+      
+{/* 
+      <CartProvider>
+      <WishlistProvider>
+       
+
+        <RelatedProducts />
+      </WishlistProvider>
+      </CartProvider> */}
+      
 
     </>
   );

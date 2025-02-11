@@ -1,0 +1,15 @@
+.categoryPanel button{text-transform: capitalize !important;}
+
+.nav li .submenu{visibility: hidden;}
+.nav li:hover .submenu{opacity: 1 !important; visibility: inherit; top:100%;}
+.nav li .submenu li button{color: #666 !important;}
+.nav li .submenu li:hover button{color: #1976d2 !important;}
+
+
+/* inner sub menu */
+.nav li .submenu li .inner-submenu{top: 0px !important; left:120% !important; opacity:0 !important;}
+.nav li .submenu li:hover .inner-submenu{left:100% !important; opacity:1 !important;}
+
+.nav li .submenu li .inner-submenu button{color: #666 !important;}
+.nav li .submenu li .inner-submenu button:hover{color: #1976d2 !important;}
+
