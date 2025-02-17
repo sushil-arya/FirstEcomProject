@@ -9,6 +9,7 @@ import { IoGridSharp } from "react-icons/io5";
 import { FaThList } from "react-icons/fa";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Pagination from '@mui/material/Pagination';
 
 const ProductListing = () => {
 
@@ -26,7 +27,7 @@ const ProductListing = () => {
   return (
 
     
-    <section className="py-5">
+    <section className="py-5 pb-0">
       {/* Breadcrumbs */}
       <div className="container">
         <Breadcrumbs aria-label="breadcrumb">
@@ -41,7 +42,7 @@ const ProductListing = () => {
           <Link
             underline="hover"
             color="inherit"
-            href="/material-ui/getting-started/installation/"
+            href="/"
             className="link transition"
           >
             Sunglass boxes
@@ -125,7 +126,7 @@ const ProductListing = () => {
                 itemView === "grid" ?
                 <>
                 
-                <ProductItem />
+                  <ProductItem />
                   <ProductItem />
                   <ProductItem />
                   <ProductItem />
@@ -149,6 +150,10 @@ const ProductListing = () => {
                   
               }
 
+            </div>
+
+            <div className="flex items-center justify-center mt-10">
+              <Pagination count={10} showFirstButton showLastButton />
             </div>
           </div>
         </div>

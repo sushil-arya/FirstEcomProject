@@ -58,7 +58,7 @@ const HomeSlider2 = () => {
               <h3 className="flex items-center gap-3 text-[18px] font-[500] w-full text-left mb-3 mt-3 relative -right-[100%] opacity-0">
                 Statring At Only{" "}
                 <span className="text-[#1976d2] text-[30px] font[700] relative -right-[100%] opacity-0">
-                  $65.00
+                  &#8377; 3500.00
                 </span>{" "}
               </h3>
               <div className="w-full btn-shop relative -right-[100%] opacity-0">
@@ -84,7 +84,7 @@ const HomeSlider2 = () => {
               <h3 className="flex items-center gap-3 text-[18px] font-[500] w-full text-left mb-3 mt-3  relative -right-[100%] opacity-0">
                 Statring At Only{" "}
                 <span className="text-[#1976d2] text-[30px] font[700]  relative -right-[100%] opacity-0">
-                  $80.00
+                &#8377; 4999.00
                 </span>{" "}
               </h3>
               <div className="w-full btn-shop relative -right-[100%] opacity-0">
@@ -110,7 +110,7 @@ const HomeSlider2 = () => {
               <h3 className="flex items-center gap-3 text-[18px] font-[500] w-full text-left mb-3 mt-3 relative -right-[100%] opacity-0">
                 Statring At Only{" "}
                 <span className="text-[#1976d2] text-[30px] font[700] relative -right-[100%] opacity-0">
-                  $65.00
+                  &#8377; 3999.00
                 </span>{" "}
               </h3>
               <div className="w-full btn-shop relative -right-[100%] opacity-0">
@@ -137,7 +137,7 @@ const HomeSlider2 = () => {
               <h3 className="flex items-center gap-3 text-[18px] font-[500] w-full text-left mb-3 mt-3 relative -right-[100%] opacity-0">
                 Statring At Only{" "}
                 <span className="text-[#1976d2] text-[30px] font[700] relative -right-[100%] opacity-0">
-                  $65.00
+                  &#8377; 2999.00
                 </span>{" "}
               </h3>
               <div className="w-full btn-shop relative -right-[100%] opacity-0">
@@ -163,7 +163,7 @@ const HomeSlider2 = () => {
               <h3 className="flex items-center gap-3 text-[18px] font-[500] w-full text-left mb-3 mt-3 relative -right-[100%] opacity-0">
                 Statring At Only{" "}
                 <span className="text-[#1976d2] text-[30px] font[700] relative -right-[100%] opacity-0">
-                  $65.00
+                  &#8377; 1999.00
                 </span>{" "}
               </h3>
               <div className="w-full btn-shop relative -right-[100%] opacity-0">
@@ -189,7 +189,7 @@ const HomeSlider2 = () => {
               <h3 className="flex items-center gap-3 text-[18px] font-[500] w-full text-left mb-3 mt-3 relative -right-[100%] opacity-0">
                 Statring At Only{" "}
                 <span className="text-[#1976d2] text-[30px] font[700] relative -right-[100%] opacity-0">
-                  $65.00
+                  &#8377; 2999.00
                 </span>{" "}
               </h3>
               <div className="w-full btn-shop relative -right-[100%] opacity-0">

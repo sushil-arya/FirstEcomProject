@@ -36,7 +36,7 @@ const ProductZoom = () => {
                       spaceBetween={0}
                       modules={[Navigation]}
                       navigation={true}
-                      className="zoomProductSliderThumbs h-[600px] overflow-hidden"
+                      className="zoomProductSliderThumbs h-[80vh] overflow-hidden"
                     >
                       <SwiperSlide>
                         <div className={`item rounded-md  overflow-hidden cursor-pointer group border border-[#e5e5e5] ${slideIndex===0 ? '' : 'opacity-80'}`} onClick={() => goto(0)}>
@@ -144,7 +144,7 @@ const ProductZoom = () => {
               </Swiper>
             </div>
 
-            <div className="zoomContainer w-[85%] border border-[#e5e5e5] h-[600px] overflow-hidden">
+            <div className="zoomContainer w-[85%] border border-[#e5e5e5] h-[80vh] overflow-hidden">
               <Swiper
                       ref={zoomSliderBig}
                       slidesPerView={1}
@@ -215,6 +215,10 @@ const ProductZoom = () => {
                           <InnerImageZoom zoomType='hover' zoomScale={1} src={'/img-products/img-product-13.webp'}/>
                       </SwiperSlide>
 
+
+                      <SwiperSlide>
+                          <InnerImageZoom zoomType='hover' zoomScale={1} src={'/img-products/img-product-14.webp'}/>
+                      </SwiperSlide>
 
               </Swiper>
             </div>

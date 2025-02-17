@@ -1,8 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const ProductTabSingle = () => {
+
+  useEffect(() => {
+    AOS.init({ 
+      duration: 700,
+      offset: 100,
+      easing: "ease-out-cubic",
+    });
+  }, []);
+
+  
   const [selectedTab, setSelectedTab] = useState(0);
 
   const tabs = [
@@ -11,9 +24,9 @@ const ProductTabSingle = () => {
       label: 'Description',
       content: (
         <div className="space-y-6">
-          <div className="bg-gray-50 p-6 rounded-lg">
+          <div className="bg-gray-50 p-6 rounded-lg" data-aos="zoom-in">
             <h3 className="text-lg font-medium mb-4">Product Details</h3>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6" >
               <div>
                 <h4 className="font-medium mb-2">MATERIALS & CARE</h4>
                 <ul className="list-disc pl-5 space-y-2 text-gray-600">
@@ -40,10 +53,10 @@ const ProductTabSingle = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-medium mb-4">Size & Fit</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <h3 className="text-lg font-medium mb-4"  data-aos="zoom-in">Size & Fit</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4" >
               {['XS', 'S', 'M', 'L', 'XL', 'XXL'].map((size) => (
-                <div key={size} className="border rounded-lg p-4 text-center">
+                <div key={size} className="border rounded-lg p-4 text-center"  data-aos="zoom-in">
                   <div className="font-medium">{size}</div>
                   <div className="text-sm text-gray-500">Available</div>
                 </div>
@@ -51,7 +64,7 @@ const ProductTabSingle = () => {
             </div>
           </div>
 
-          <div className="bg-gray-50 p-6 rounded-lg">
+          <div className="bg-gray-50 p-6 rounded-lg"  data-aos="zoom-in">
             <h3 className="text-lg font-medium mb-4">Product Description</h3>
             <p className="text-gray-600 leading-relaxed">
               Crafted from premium materials, this versatile piece combines comfort with style. 
@@ -68,7 +81,7 @@ const ProductTabSingle = () => {
       label: 'Customer Reviews',
       content: (
         <div className="space-y-6">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between" >
             <div>
               <h3 className="text-lg font-medium">Customer Reviews</h3>
               <div className="flex items-center mt-2">
@@ -93,7 +106,7 @@ const ProductTabSingle = () => {
           </div>
 
           {/* Review Filters */}
-          <div className="flex gap-2 overflow-x-auto pb-2">
+          <div className="flex gap-2 overflow-x-auto pb-2 " >
             {['All Reviews', '5 Stars', '4 Stars', '3 Stars', '2 Stars', '1 Star'].map((filter) => (
               <button
                 key={filter}
@@ -212,9 +225,9 @@ const ProductTabSingle = () => {
       label: 'Return Policies',
       content: (
         <div className="space-y-6">
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-lg font-medium mb-4">Return Policy Overview</h3>
-            <div className="space-y-4 text-gray-600">
+          <div className="bg-gray-50 p-6 rounded-lg" data-aos="fade-down">
+            <h3 className="text-lg font-medium mb-4"  >Return Policy Overview</h3>
+            <div className="space-y-4 text-gray-600" data-aos="fade-up">
               <p>
                 We want you to be completely satisfied with your purchase. If you're not 
                 happy with your order, you can return it within 30 days of delivery.
@@ -228,7 +241,7 @@ const ProductTabSingle = () => {
             </div>
           </div>
 
-          <div>
+          <div data-aos="fade-up" data-aos-duration="3000">
             <h3 className="text-lg font-medium mb-4">Non-Returnable Items</h3>
             <ul className="list-disc pl-5 space-y-2 text-gray-600">
               <li>Intimate apparel</li>
@@ -238,24 +251,24 @@ const ProductTabSingle = () => {
             </ul>
           </div>
 
-          <div className="bg-gray-50 p-6 rounded-lg">
+          <div className="bg-gray-50 p-6 rounded-lg" data-aos="zoom-in" >
             <h3 className="text-lg font-medium mb-4">Refund Process</h3>
-            <div className="space-y-4">
+            <div className="space-y-4" data-aos="fade-up">
               <p className="text-gray-600">
                 Once we receive your return, we'll inspect the item and process your refund. 
                 The refund will be issued to your original payment method within 5-7 
                 business days.
               </p>
-              <div className="grid md:grid-cols-3 gap-4 mt-4">
-                <div className="border rounded-lg p-4">
+              <div className="grid md:grid-cols-3 gap-4 mt-4" data-aos="fade-down">
+                <div className="border rounded-lg p-4" data-aos="fade-up" data-aos-duration="3000">
                   <div className="font-medium mb-2">Step 1</div>
                   <div className="text-sm text-gray-600">Initiate return request</div>
                 </div>
-                <div className="border rounded-lg p-4">
+                <div className="border rounded-lg p-4"  data-aos="fade-up" data-aos-duration="3000">
                   <div className="font-medium mb-2">Step 2</div>
                   <div className="text-sm text-gray-600">Ship items back</div>
                 </div>
-                <div className="border rounded-lg p-4">
+                <div className="border rounded-lg p-4"  data-aos="fade-up" data-aos-duration="3000">
                   <div className="font-medium mb-2">Step 3</div>
                   <div className="text-sm text-gray-600">Receive refund</div>
                 </div>
@@ -268,7 +281,7 @@ const ProductTabSingle = () => {
   ];
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 py-8">
+    <div className="w-full max-w-10xl  px-2 py-8">
       <TabGroup selectedIndex={selectedTab} onChange={setSelectedTab}>
         <TabList className="flex space-x-8 border-b">
           {tabs.map((tab) => (
@@ -277,8 +290,8 @@ const ProductTabSingle = () => {
               className={({ selected }) =>
                 `pb-4 relative focus:outline-none ${
                   selected
-                    ? 'text-black'
-                    : 'text-gray-500 hover:text-black'
+                    ? 'text-[#1976d2]'
+                    : 'text-gray-600 hover:text-[#4d4e4f]'
                 }`
               }
             >
@@ -287,7 +300,7 @@ const ProductTabSingle = () => {
                   {tab.label}
                   {selected && (
                     <motion.div
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-black"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#1975d1]"
                       layoutId="underline"
                     />
                   )}
@@ -296,7 +309,7 @@ const ProductTabSingle = () => {
             </Tab>
           ))}
         </TabList>
-        <TabPanels className="mt-8">
+        <TabPanels className="mt-8"  data-aos='zoom-in'>
           <AnimatePresence mode="wait">
             {tabs.map((tab, idx) => (
               <TabPanel

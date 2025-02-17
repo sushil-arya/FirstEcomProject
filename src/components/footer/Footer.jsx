@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { TbTruckDelivery } from "react-icons/tb";
 import { TbTruckReturn } from "react-icons/tb";
@@ -26,9 +26,17 @@ import { IoLogoSkype } from "react-icons/io5";
 
 import { PiBuildingOfficeFill } from "react-icons/pi";
 
+//cart import section
+import Drawer from "@mui/material/Drawer";
+import CartPanel from "../cartPanel/CartPanel";
+import { IoCloseSharp } from "react-icons/io5";
+import { MyContext } from "../../App";
+
+
 const Footer = () => {
 
-  
+  const context = useContext(MyContext);
+
   return (
 
 
@@ -248,6 +256,30 @@ const Footer = () => {
             </div>
             {/* <Link to="/" className="link">Privacy Policy</Link> */}
           </div>
+
+                {/* cart panel */}
+          <Drawer
+            open={context.openCartPanel}
+            onClose={context.toggleCartPanel(false)}
+            anchor={"right"}
+            className="cartPanel"
+          >
+            <div className="flex items-center justify-between py-3 px-4 gap-3">
+              <h4>Shopping Cart</h4>
+
+              <IoCloseSharp
+                className="text-[20px] cursor-pointer"
+                onClick={context.toggleCartPanel(false)}
+              />
+
+            </div>
+
+            <Divider />
+
+            {/* cart panel component here - cart items */}
+
+            <CartPanel />
+          </Drawer>
     </>
 
   );

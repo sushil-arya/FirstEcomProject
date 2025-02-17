@@ -8,13 +8,17 @@ import { IoGitCompareSharp } from "react-icons/io5";
 import { MdZoomOutMap } from "react-icons/md";
 import { GrView } from "react-icons/gr";
 import { IoCartOutline } from "react-icons/io5";
+import { MyContext } from "../../App";
+import { useContext } from "react";
 
 
 const ProductItemListView = () => {
+
+  const context = useContext(MyContext);
   return (
     <div className="productItem shadow-md overflow-hidden rounded-md border-1 border-[rgba(0,0,0,0.1)] flex items-center">
       <div className="imgWrapper group w-[25%] h-full overflow-hidden rounded-md relative">
-        <Link to="/">
+        <Link to="/product/8526">
           <div className="img">
             {/* image front */}
             {/* <img
@@ -53,23 +57,23 @@ const ProductItemListView = () => {
         </span>
 
         {/* product hover buttons */}
-        <div className="actions absolute top-[-200px] right-[5px] z-50 flex items-center gap-2 flex-col w-[50px] transition-all group-hover:top-[5px] duration-700">
-          <Button className="!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !bg-[rgba(255,255,255)] text-black group border-1 border-[rgba(0,0,0,0.9)] shadow-md">
+        <div className="actions absolute top-[-20px] right-[5px] z-50 flex items-center gap-2 flex-col w-[50px] transition-all group-hover:top-[5px] opacity-0 group-hover:opacity-100 duration-800">
+          <Button className="!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !bg-[white] text-black !border-1 !border-[#e5e5e5] shadow-md group" onClick={()=>context.setOpenProductDetailsModal(true)}>
             {" "}
             <MdZoomOutMap className="text-[20px] group-hover:text-[#1976d2] " />{" "}
           </Button>
 
-          <Button className="!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !bg-[rgba(255,255,255)] text-black group border-1 border-[rgba(0,0,0,0.9)] shadow-md">
+          <Button className="!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !bg-[white] text-black !border-1 !border-[#e5e5e5] shadow-md group">
             {" "}
             <FaRegHeart className="text-[20px] group-hover:text-[#1976d2] " />{" "}
           </Button>
 
-          <Button className="!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !bg-[rgba(255,255,255)] text-black group border-1 border-[rgba(0,0,0,0.9)] shadow-md">
+          <Button className="!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !bg-[white] text-black !border-1 !border-[#e5e5e5] shadow-md group">
             {" "}
             <IoGitCompareSharp className="text-[20px] group-hover:text-[#1976d2] " />{" "}
           </Button>
 
-          <Button className="!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !bg-[rgba(255,255,255)] text-black group border-1 border-[rgba(0,0,0,0.9)] shadow-md">
+          <Button className="!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !bg-[white] text-black !border-1 !border-[#e5e5e5] shadow-md group">
             {" "}
             <GrView className="text-[20px] group-hover:text-[#1976d2] " />{" "}
           </Button>
@@ -96,9 +100,9 @@ const ProductItemListView = () => {
         <Rating name="size-small" defaultValue={4} size="small" readOnly />
 
         <div className="flex items-center gap-3">
-          <span className="oldPrice line-through text-gray-500">$80.00</span>
+          <span className="oldPrice line-through text-gray-500">&#8377; 80.00</span>
           <span className="price text-[#1976d2] text-[18px] font-bold ">
-            $60.00
+          &#8377; 60.00
           </span>
         </div>
 

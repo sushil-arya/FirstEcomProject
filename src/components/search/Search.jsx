@@ -11,7 +11,7 @@ const Search = () => {
       {/* <button className='absolute right-0 top-0 h-[50px] w-[90px] bg-[#4871b8] text-white rounded-[5px] text-[15px]'>Search</button> */}
 
       <Button  className='!absolute right-[10px] top-[2px] !w-[38px] !min-w-[38px] h-[38px] z-50 !rounded-full !text-[#05132c]'><IoSearch className='!text-[#0e2751] text-[30px]'/></Button>
-   
+
     </div>
   )
 }

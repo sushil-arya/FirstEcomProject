@@ -13,7 +13,7 @@ body{
   font-optical-sizing: auto;
   background: #f5f0f0;
   /* color: rgba(0, 0, 0, 0.9); */
-  color: rgba(36, 36, 36, 1);
+  /* color: rgba(36, 36, 36, 1); */
   overflow-x: hidden;
 
 }
@@ -28,6 +28,10 @@ body{
 ::-webkit-scrollbar-thumb{background: #ccc;}
 ::-webkit-scrollbar-track{background: #fff;}
 
+.link{
+  cursor: pointer;
+  color: #777;
+}
 .link:hover{
   /* color: #ff5252; */
   /* color: #4871b8; */
@@ -37,7 +41,8 @@ body{
 
 
 
-p{font-size: 14px; line-height: 25px;}
+
+/* p{font-size: 14px; line-height: 25px; margin-bottom: 10px; margin-top: 10px;} */
 
 /* header .top-strip{border-top: 1px solid rgba(0, 0, 0, 0.1); 
 
@@ -57,6 +62,8 @@ p{font-size: 14px; line-height: 25px;}
 .bg-primary{
   background: #1976d2;
 }
+
+.btn-lg{font-size: 17px !important; padding: 10px 15px !important; font-weight: 400 !important;}
 
 /* matiralUI button effect on nav bar */
 nav ul button{text-transform: capitalize !important; }
@@ -224,6 +231,9 @@ nav ul button:hover{background:none !important;}
 
 }
 
+/* pagination */
+.Mui-selected.MuiPaginationItem-page{background: #1976d2 !important; color:#fff !important;}
+
 
 
 .zoomProductSliderThumbs .swiper-wrapper{padding-top: 38px !important; padding-bottom: 38px !important;}
@@ -240,6 +250,8 @@ nav ul button:hover{background:none !important;}
 .zoomProductSliderThumbs .swiper-button-prev:after{
   transform: rotate(90deg)
 }
+
+/* .col1 .slider .zoomProductSliderThumbs .swiper-wrapper .swiper-slide {height: 75px !important;} */
 
 
 /* ProductDetails Page Box Slots css */
@@ -261,6 +273,29 @@ input[type=number]::-webkit-outer-spin-button {
     appearance: none;
     margin: 0; 
 }
+
+/*forgot password otp-verify page css */
+.otpBox input{border: 1px solid rgba(0,0,0,0.3) !important; outline: none !important; border-radius: 4px;}
+
+.otpBox input:focus{border: 1px solid rgba(0,0,0,0.7) !important;}
+
+.otpPage .container{height: 90vh; display: flex;}
+
+
+
+/* reviews scroll on product details page now disable will see later */
+/* .reviewScroll::-webkit-scrollbar{width: 5px !important; }
+.reviewScroll::-webkit-scrollbar-thumb{background: #ccc !important; } */
+
+/* .productDetailsModal .MuiDialogContent-root{padding:0px !important;} */
+
+
+/* to visible the next comming slide */
+/* 
+.productsSlider .swiper, .blogSection .swiper{overflow: inherit !important;} */
+
+.cartPanel .MuiPaper-root {width: 400px !important; overflow: hidden;}
+
 
 
 /* @media (max-width: 767px) {
