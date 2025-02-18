@@ -26,6 +26,8 @@ import Register from "./pages/register/Register";
 import Verify from "./pages/verify/Verify";
 import toast, { Toaster } from "react-hot-toast";
 import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
+import Cart from "./pages/cart/Cart";
+import Checkout from "./pages/checkout/Checkout";
 
 const MyContext = createContext();
 
@@ -109,6 +111,18 @@ const App = () => {
               path={"/forgot-password"}
               exact={true}
               element={<ForgotPassword />}
+            />
+
+            <Route
+              path={"/cart"}
+              exact={true}
+              element={<Cart />}
+            />
+
+          <Route
+              path={"/checkout"}
+              exact={true}
+              element={<Checkout />}
             />
 
             {/* need to remove this before final code */}

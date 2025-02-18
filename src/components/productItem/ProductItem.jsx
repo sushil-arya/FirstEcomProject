@@ -96,9 +96,9 @@ const ProductItem = () => {
               <Rating name="size-small" defaultValue={4} size="small" readOnly />
 
               <div className="flex items-center gap-3">
-                <span className="oldPrice line-through text-gray-500">&#8377; 80.00</span>
+                <span className="oldPrice line-through text-gray-500 text-[16px]">&#8377; 3500.00</span>
                 <span className="price text-[#1976d2] text-[18px] font-bold ">
-                &#8377; 60.00
+                &#8377; 1999.00
                 </span>
               </div>
             </div>

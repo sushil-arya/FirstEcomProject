@@ -53,7 +53,7 @@ const ProductListing = () => {
       <div className="bg-white p-2 mt-4">
         <div className="container flex gap-3">
           {/* side bar - filter bar */}
-          <div className="sidebarWrapper w-[20%] h-full bg-white ">
+          <div className="sidebarWrapper w-[20%] h-full bg-white  sticky top-[5px]">
             <SideBar />
           </div>
 

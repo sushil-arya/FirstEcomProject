@@ -55,7 +55,7 @@ const Login = () => {
 
 
             {
-              isShowPassword === false ?  <IoMdEye className="text-[20px] opacity-75"/> : <IoMdEyeOff className="text-[20px] opacity-75"/>
+              isShowPassword === false ?  <IoMdEyeOff className="text-[20px] opacity-75"/> : <IoMdEye className="text-[20px] opacity-75"/>
 
             }
             
