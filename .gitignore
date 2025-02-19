@@ -24,16 +24,17 @@ dist-ssr
 *.sw?
 
 
-dummy-1.webp
-dummy-2.webp
-dummy-3.webp
-dummy-4.webp
-dummy-5.webp
-dummy-6.webp
-dummy-7.webp
-dummy-8.webp
-dummy-9.webp
-dummy-10.webp
+dummy-1.JPG
+dummy-2.JPG
+dummy-3.JPG
+dummy-4.JPG
+dummy-5.WEBP
+dummy-6.WEBP
+dummy-7.WEBP
+dummy-8.WEBP
+dummy-9.JPG
+dummy-9.WEBP
+dummy-10.WEBP
 
 product1.webp
 product2.webp
