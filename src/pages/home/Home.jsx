@@ -125,11 +125,11 @@ const Home = () => {
 
             <div className="col2">
               <p className="mb-0 font-[500]">
-                Free Delivery Now On Your First Order and over $200
+                Free Delivery Now On Your First Order and over &#8377; 200
               </p>
             </div>
 
-            <p className="font-bold text-[25px]">- Only $200*</p>
+            <p className="font-bold text-[25px]">- Only &#8377; 200*</p>
           </div>
 
           <AdsBannerSlider items={4} />
@@ -219,7 +219,7 @@ const Home = () => {
 {/* 
       <CartProvider>
       <WishlistProvider>
-       
+
 
         <RelatedProducts />
       </WishlistProvider>
