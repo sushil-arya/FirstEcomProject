@@ -28,6 +28,8 @@ import toast, { Toaster } from "react-hot-toast";
 import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import Cart from "./pages/cart/Cart";
 import Checkout from "./pages/checkout/Checkout";
+import MyAccount from "./pages/myAccount/MyAccount";
+import MyList from "./pages/myList/MyList";
 
 const MyContext = createContext();
 
@@ -40,6 +42,9 @@ const App = () => {
 
   const [fullWidth, setFullWidth] = useState(true);
   const [maxWidth, setMaxWidth] = useState("lg");
+
+  const[isLogin, setIsLogin] = useState(true);
+
 
   const [openCartPanel, setOpenCartPanel] = useState(false);
 
@@ -65,7 +70,9 @@ const App = () => {
     setOpenCartPanel,
     openCartPanel,
     toggleCartPanel,
-    openAlertBox
+    openAlertBox,
+    isLogin,
+    setIsLogin
   };
 
   return (
@@ -123,6 +130,18 @@ const App = () => {
               path={"/checkout"}
               exact={true}
               element={<Checkout />}
+            />
+
+            <Route
+              path={"/my-account"}
+              exact={true}
+              element={<MyAccount />}
+            />
+
+            <Route
+              path={"/my-list"}
+              exact={true}
+              element={<MyList />}
             />
 
             {/* need to remove this before final code */}

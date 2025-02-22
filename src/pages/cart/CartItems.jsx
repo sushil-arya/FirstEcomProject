@@ -44,11 +44,6 @@ const handleCloseQty = (value) => {
   
 };
 
-
-
-
-
-
   return (
     <>
       <div className="cartItem w-full p-3 flex items-center gap-4 pt-4 pb-5 border-b border-[rgba(0,0,0,0.1)]">

@@ -105,7 +105,7 @@ const Footer = () => {
       <div className="footer flex p-8">
         {/* Part1 Contact Us */}
         <div className="contactUs w-[25%] border-r border-r-[rgba(0,0,0,0.23)]">
-         <div className="w-full flex items-center flex-col justify-center pb-4">
+          <div className="w-full flex items-center flex-col justify-center pb-4">
             <img src="/img-logo/alawo_logo.webp" alt="" />
             <Divider className="pt-2 w-70" />
           </div>
@@ -168,8 +168,7 @@ const Footer = () => {
           
           </div>
           
-       
-        
+
           {/* Part2 */}
           <div className="part2_col2 w-[50%]">
           <h2 className="text-[18px] font-[600] ">Our Company</h2> <br />
@@ -260,7 +259,7 @@ const Footer = () => {
                 {/* cart panel */}
           <Drawer
             open={context.openCartPanel}
-            onClose={context.toggleCartPanel(false)}
+            onClick={context.toggleCartPanel(false)}
             anchor={"right"}
             className="cartPanel"
           >

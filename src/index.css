@@ -11,9 +11,11 @@
 body{
   font-family: "Inter", serif;
   font-optical-sizing: auto;
+  min-height: 100vh;
+  /* background: linear-gradient(90deg, #e2e2e2, #c9d6ff); */
   background: #f5f0f0;
   /* color: rgba(0, 0, 0, 0.9); */
-  /* color: rgba(36, 36, 36, 1); */
+  color: rgba(36, 36, 36, 1);
   overflow-x: hidden;
 
 }
@@ -61,9 +63,25 @@ body{
 
 .bg-primary{
   background: #1976d2;
+  
 }
 
 .btn-lg{font-size: 17px !important; padding: 10px 15px !important; font-weight: 400 !important;}
+
+.btn-blue{background: #1976d2 !important; color: #fff !important; font-weight:500; font-size: 16px; padding:10px 20px !important;}
+.btn-blue:hover{background: #004d9a !important;}
+
+.btn-blue.btn-border{background: none !important; color: #1976d2 !important; border: 1px solid #1976d2 !important; font-weight:500; font-size:16px; padding:10px 20px !important;
+  
+}
+
+.btn-blue.btn-border:hover{background: #004d9a  !important; color: #fff !important; border: 1px solid #1976d2 !important;
+
+ transition-delay: #004d9a ease-in-out 10s !important;
+
+}
+
+/*  #0055ab  #166cc1 */
 
 /* matiralUI button effect on nav bar */
 nav ul button{text-transform: capitalize !important; }
@@ -75,7 +93,6 @@ nav ul button:hover{background:none !important;}
 .scroll::-webkit-scrollbar{width: 5px !important;}
 .scroll::-webkit-scrollbar-thumb{background: #ccc !important;}
 
-.btn-blue{background: #1976d2 !important; color: #fff !important; font-weight:500; font-size:16px; padding:10px 20px !important}
 
 
 /* Hero Section Banner buttons */
@@ -304,11 +321,18 @@ input[type=number]::-webkit-outer-spin-button {
 .otpPage .container{height: 90vh; display: flex;}
 
 
+/* nav drop down user and my account width */
+#myAccount-menu .MuiPaper-root{width: 200px !important;}
 
+#accountLogin-menu .MuiPaper-root{width: 140px !important;}
 
+/* navlink active bar on my account page */
+.myAccountTabs li a{position: relative; display: block;}
 
+.myAccountTabs li a:before{content: ''; width: 3px; height: 50%; position: absolute; top: 50%; left: 0px; background: #1976d2; transition: all 0.5s ease-in-out; opacity:0;}
 
-
+.myAccountTabs li a.active:before{height:100%; opacity: 1; top: 0px;}
+.myAccountTabs li a.active button svg{color: #1976d2 !important; opacity: 1;}
 
 
 /* @media (max-width: 767px) {
