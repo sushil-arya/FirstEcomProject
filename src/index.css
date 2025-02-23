@@ -26,9 +26,11 @@ body{
   margin: auto;
 }
 
-::-webkit-scrollbar{width:10px !important; }
+::-webkit-scrollbar{width:10px !important; height: 8px !important;}
 ::-webkit-scrollbar-thumb{background: #ccc;}
 ::-webkit-scrollbar-track{background: #fff;}
+
+.overflow-x-auto::-webkit-scrollbar-thumb{background: #ccc;}
 
 .link{
   cursor: pointer;

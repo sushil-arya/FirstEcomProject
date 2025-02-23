@@ -30,6 +30,7 @@ import Cart from "./pages/cart/Cart";
 import Checkout from "./pages/checkout/Checkout";
 import MyAccount from "./pages/myAccount/MyAccount";
 import MyList from "./pages/myList/MyList";
+import Orders from "./pages/orders/Orders";
 
 const MyContext = createContext();
 
@@ -142,6 +143,12 @@ const App = () => {
               path={"/my-list"}
               exact={true}
               element={<MyList />}
+            />
+
+          <Route
+              path={"/my-orders"}
+              exact={true}
+              element={<Orders />}
             />
 
             {/* need to remove this before final code */}

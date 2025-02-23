@@ -36,7 +36,6 @@ const SideBar = () => {
           <div className="scroll px-4 relative -left-[13px]">
             <FormControlLabel control={<Checkbox size="small" />} label="Available (17)" className="w-full" />
             <FormControlLabel control={<Checkbox size="small" />} label="In stock (17)" className="w-full" />
-  
           </div>
         </Collapse>
       </div>
@@ -110,15 +109,8 @@ const SideBar = () => {
        </div>
       </div>
 
-      
-
-
-
-
-
-
     </aside>
   )
 }
 
-export default SideBar
+export default SideBar;
