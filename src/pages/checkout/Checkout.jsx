@@ -1,16 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { BsFillBagCheckFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Checkout = () => {
+  //aos animation
+  useEffect(() => {
+          AOS.init({
+            duration: 700,
+            offset: 100,
+            easing: "ease-out-cubic",
+          });
+        }, []);
+
   return (
     <section className='py-10'>
-      <div className="container flex gap-5">
+      <div className="container flex gap-5" data-aos="zoom-out">
 
         {/* left col Billing details */}
-        <div className="leftCol w-[70%]">
+        <div className="leftCol w-[70%]" >
           <div className="card bg-white shadow-md p-5 rounded-md w-full">
             <h2>Billing Details</h2>
             

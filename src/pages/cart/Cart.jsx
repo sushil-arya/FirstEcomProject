@@ -1,25 +1,34 @@
-import React from "react";
-
+import React, { useEffect } from "react";
 import Divider from '@mui/material/Divider';
 import Button from "@mui/material/Button";
 import { BsFillBagCheckFill } from "react-icons/bs";
 import CartItems from "./CartItems";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 
 const Cart = () => {
 
+  useEffect(() => {
+          AOS.init({
+            duration: 700,
+            offset: 100,
+            easing: "ease-out-cubic",
+          });
+        }, []);
+
 
   return (
-    <section className="section py-10 pb-10">
+    <section className="section py-10 pb-10" data-aos="zoom-out">
       <div className="container w-[80%] max-w-[80%] flex gap-5">
 
         {/* product or shopping item card left side */}
-        <div className="leftPart w-[70%] ">
+        <div className="leftPart w-[70%]">
 
 
-          <div className="shadow-md rounded-md bg-white">
+          <div className="shadow-md rounded-md bg-white" data-aos="fade-up">
 
             <div className="py-3 px-4 border-b border-[rgba(0,0,0,0.1)]">
               <h2 className="text-[15px] text-[#444] font-[600]">Your Cart</h2>

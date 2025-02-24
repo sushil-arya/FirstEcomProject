@@ -1,20 +1,32 @@
 import Button from '@mui/material/Button';
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Divider from "@mui/material/Divider";
 import { TextField } from '@mui/material';
 import AccountSideBar from '../../components/accountSideBar/AccountSideBar';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const MyAccount = () => {
+
+        useEffect(() => {
+          AOS.init({
+            duration: 700,
+            offset: 100,
+            easing: "ease-out-cubic",
+          });
+        }, []);
+    
+  
   return (
-    <section className='py-10 w-full'>
+    <section className='py-10 w-full' >
       <div className="container flex gap-5">
         <div className="col1 w-[20%]">
           {/* Account side bar component */}
           <AccountSideBar />
         </div>
 
-        <div className="col2 w-[50%]">
+        <div className="col2 w-[50%]" data-aos="fade-up">
           <div className="card bg-white p-5 shadow-md rounded-md">
             <h2>My Profile</h2>
             <Divider className='!mt-5' /> 

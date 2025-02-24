@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 import Menu from '@mui/material/Menu';
@@ -7,7 +7,9 @@ import { GoTriangleDown } from "react-icons/go";
 import Rating from "@mui/material/Rating";
 
 
+
 const CartItems = (props) => {
+
 
 //boxes slots menu changer
 const [sizeAnchorEl, setSizeAnchorEl] = useState(null);
@@ -47,12 +49,12 @@ const handleCloseQty = (value) => {
   return (
     <>
       <div className="cartItem w-full p-3 flex items-center gap-4 pt-4 pb-5 border-b border-[rgba(0,0,0,0.1)]">
-              <div className="img w-[15%] rounded-md overflow-hidden border border-[rgba(0,0,0,0.1)] shadow-md ">
+              <div className="img w-[15%] rounded-md overflow-hidden border border-[rgba(0,0,0,0.1)] shadow-md" >
                 <Link to="/product/7896" className="group">
                   <img
                     src="/img-products/img-product-3.webp"
                     className="w-full group-hover:scale-105 transition-all"
-                    alt="cart-product"
+                    alt="cart-product" 
                   />
                 </Link>
               </div>

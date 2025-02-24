@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MyListItems from "./MyListItems";
 import AccountSideBar from "../../components/accountSideBar/AccountSideBar";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const MyList = () => {
+    useEffect(() => {
+      AOS.init({
+        duration: 700,
+        offset: 100,
+        easing: "ease-out-cubic",
+      });
+    }, []);
+
 
   return (
 
@@ -14,7 +24,7 @@ const MyList = () => {
         <AccountSideBar />
       </div>
 
-      <div className="col2 w-[78%]">
+      <div className="col2 w-[78%]" data-aos="zoom-out">
 
         <div className="shadow-md rounded-md bg-white">
 
@@ -26,12 +36,12 @@ const MyList = () => {
         </p>
       </div>
 
-      {/* CartItems component here  */}
-      <MyListItems  />
-      <MyListItems  />
-      <MyListItems  />
-      <MyListItems  />
-      <MyListItems  />
+          {/* CartItems component here  */}
+          <MyListItems />
+          <MyListItems />
+          <MyListItems />
+          <MyListItems />
+          <MyListItems />
         </div>
       </div>
 

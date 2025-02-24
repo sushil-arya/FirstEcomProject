@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import InnerImageZoom from 'react-inner-image-zoom';
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css';
 
@@ -8,10 +8,22 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 // import required modules
 import { Navigation } from "swiper/modules";
 
 const ProductZoom = () => {
+
+          useEffect(() => {
+            AOS.init({
+              duration: 700,
+              offset: 100,
+              easing: "ease-out-cubic",
+            });
+          }, []);
+      
 
   const [slideIndex, setSlideIndex] = useState(0);
   const zoomSliderBig = useRef();
@@ -27,7 +39,7 @@ const ProductZoom = () => {
   return (
     <>
         <div className="flex gap-3">
-            <div className="slider w-[15%]">
+            <div className="slider w-[15%]" data-aos="zoom-in">
               <Swiper
 
                       ref={zoomSliderSml}
@@ -40,7 +52,7 @@ const ProductZoom = () => {
                     >
                       <SwiperSlide>
                         <div className={`item rounded-md  overflow-hidden cursor-pointer group border border-[#e5e5e5] ${slideIndex===0 ? '' : 'opacity-80'}`} onClick={() => goto(0)}>
-                          <img src="/img-products/img-product-1.webp" className='w-full transition-all overflow-hidden group-hover:scale-105' alt="Product" />
+                          <img src="/img-products/img-product-1.webp" className='w-full transition-all overflow-hidden group-hover:scale-105' alt="Product" data-aos="flip-down"/>
 
                           
                         </div>
@@ -144,7 +156,7 @@ const ProductZoom = () => {
               </Swiper>
             </div>
 
-            <div className="zoomContainer w-[85%] border border-[#e5e5e5] h-[80vh] overflow-hidden">
+            <div className="zoomContainer w-[85%] border border-[#e5e5e5] h-[80vh] overflow-hidden" data-aos="zoom-in">
               <Swiper
                       ref={zoomSliderBig}
                       slidesPerView={1}

@@ -1,13 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AccountSideBar from "../../components/accountSideBar/AccountSideBar";
 import Button from '@mui/material/Button';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa6';
 import Badges from '../../components/badge/Badges';
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 // import { IoIosList, IoIosCart, IoIosNotifications, IoIosSettings, IoIosHelpCircle } from'react-icons/io5';
 
 
 const Orders = () => {
+
+    useEffect(() => {
+      AOS.init({
+        duration: 700,
+        offset: 100,
+        easing: "ease-out-cubic",
+      });
+    }, []);
+  
   const [isOpenOrderedProduct, setIsOpenOrderedProduct] = useState(false);
 
   const isShowOrderedProduct =(index)=>{
@@ -24,13 +36,13 @@ const Orders = () => {
 <div className="container flex gap-5">
   <div className="col1 w-[20%]">
     {/* Account side bar component */}
-    <AccountSideBar />
+    <AccountSideBar/>
   </div>
 
-  <div className="col2 w-[78%]">
-    <div className="shadow-md rounded-md bg-white">
+  <div className="col2 w-[78%]" data-aos="zoom-out">
+    <div className="shadow-md rounded-md bg-white" >
 
-      <div className="py-3 px-4 border-b !border-[#e5e5e5]">
+      <div className="py-3 px-4 border-b !border-[#e5e5e5]" >
         <h2 className="text-[15px] text-[#444] font-[600]">My Orders</h2>
         <p className="mt-0 text-[14px]">
           There are <span className="font-bold text-[#1976d2]">5</span>{" "}
@@ -156,7 +168,7 @@ const Orders = () => {
                 isOpenOrderedProduct === 0 && (
 
                   
-                  <tr>
+                  <tr data-aos="zoom-out" data-aos-delay="50">
                     <td className='pl-20' colSpan="6">
                       <div className="relative overflow-x-auto">
                         <table className='w-full text-sm text-left  rtl:text-right text-gray-500 dark:text-gray-400'>
@@ -320,7 +332,7 @@ const Orders = () => {
               </tr>
               {
                   isOpenOrderedProduct === 1 && (
-                    <tr>
+                    <tr data-aos="zoom-out">
                         <td className='pl-20' colSpan="6">
                           <div className="relative overflow-x-auto">
                             <table className='w-full text-sm text-left  rtl:text-right text-gray-500 dark:text-gray-400'>
@@ -482,7 +494,7 @@ const Orders = () => {
 
                 isOpenOrderedProduct === 2 && (
 
-                  <tr>
+                  <tr data-aos="zoom-out">
                     <td className='pl-20' colSpan="6">
                       <div className="relative overflow-x-auto">
                         <table className='w-full text-sm text-left  rtl:text-right text-gray-500 dark:text-gray-400'>
@@ -650,7 +662,7 @@ const Orders = () => {
                 isOpenOrderedProduct === 3 && (
 
                   
-                  <tr>
+                  <tr data-aos="zoom-out">
                     <td className='pl-20' colSpan="6">
                       <div className="relative overflow-x-auto">
                         <table className='w-full text-sm text-left  rtl:text-right text-gray-500 dark:text-gray-400'>
@@ -817,7 +829,7 @@ const Orders = () => {
                 isOpenOrderedProduct === 4 && (
 
                   
-                  <tr>
+                  <tr data-aos="zoom-out">
                     <td className='pl-20' colSpan="6">
                       <div className="relative overflow-x-auto">
                         <table className='w-full text-sm text-left  rtl:text-right text-gray-500 dark:text-gray-400'>

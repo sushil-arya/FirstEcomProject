@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { IoMdEye } from "react-icons/io";
@@ -6,9 +6,20 @@ import { IoMdEyeOff } from "react-icons/io";
 import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
 import { MyContext } from '../../App';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const Login = () => {
+
+          useEffect(() => {
+            AOS.init({
+              duration: 700,
+              offset: 100,
+              easing: "ease-out-cubic",
+            });
+          }, []);
+      
 
   const [isShowPassword, setIsShowPassword] = useState(false);
   const [formFields, setFormsFields] = useState({
@@ -29,11 +40,11 @@ const Login = () => {
   }
 
   return (
-    <section className='section py-10'>
+    <section className='section py-10' data-aos="zoom-out">
       <div className="container">
         <div className="card shadow-md w-[400px] m-auto rounded-md bg-white p-5 px-10">
           <h3 className='text-center text-[18px] text-[#666]'>Login to your account</h3>
-          <form className='w-full mt-5'>
+          <form className='w-full mt-5' data-aos="fade-up">
 
             {/* email id field */}
             <div className="form-group w-full mb-5">

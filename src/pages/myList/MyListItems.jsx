@@ -1,17 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 
 import Rating from "@mui/material/Rating";
 import Button from '@mui/material/Button';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 
 const MyListItems = (props) => {
-
+      useEffect(() => {
+        AOS.init({
+          duration: 700,
+          offset: 100,
+          easing: "ease-out-cubic",
+        });
+      }, []);
+  
 
   return (
     <>
-      <div className="cartItem w-full p-3 flex items-center gap-4 pt-4 pb-5 border-b border-[rgba(0,0,0,0.1)]">
+      <div className="cartItem w-full p-3 flex items-center gap-4 pt-4 pb-5 border-b border-[rgba(0,0,0,0.1)]" data-aos="zoom-out" >
               <div className="img w-[15%] rounded-md overflow-hidden border border-[rgba(0,0,0,0.1)] shadow-md ">
                 <Link to="/product/7896" className="group">
                   <img
@@ -22,7 +32,7 @@ const MyListItems = (props) => {
                 </Link>
               </div>
 
-              <div className="info w-[85%] relative">
+              <div className="info w-[85%] relative" data-aos="fade-up">
                 <IoCloseSharp className="cursor-pointer absolute top-[0px] right-[0px] text-[18px] link hover:scale-105"/>
                 <span className="text-[13px] text-[#888] ">
                   Leather Watch Box

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from "@mui/material/Button";
 import QuantityBox from "../quantityBox/QuantityBox";
 import Rating from "@mui/material/Rating";
@@ -6,8 +6,19 @@ import Divider from "@mui/material/Divider";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
 import { IoGitCompareSharp } from "react-icons/io5";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ProductDetailsComponent = () => {
+
+        useEffect(() => {
+          AOS.init({
+            duration: 700,
+            offset: 100,
+            easing: "ease-out-cubic",
+          });
+        }, []);
+    
 
     const [productActionIndex, setProductActionIndex] = useState(null);
     //  const [productActionIndex, setProductActionIndex] = useState(null);
@@ -16,14 +27,14 @@ const ProductDetailsComponent = () => {
   return (
     <>
           
-    
-          <h1 className="text-[22px] font-[600] mb-2">
+      
+          <h1 className="text-[22px] font-[600] mb-2" data-aos="zoom-in" >
               LEDO Watch Box and Sunglass Case Holder Organizer with 6 Slots for
               Watches and 3 Slots for Sunglasses in Black and Cherry color
             </h1>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3" data-aos="zoom-in" >
               <span className="text-gray-600 text-[13px]">
-                Bran d:{" "}
+                Brand:{" "}
                 <span className="font-[500] text-[#666]">Alawo Watch Box</span>
               </span>
 
@@ -37,7 +48,7 @@ const ProductDetailsComponent = () => {
               <span className="text-[13px] cursor-pointer">(5 reviews)</span>
             </div>
 
-            <div className="flex items-center gap-4 mt-4">
+            <div className="flex items-center gap-4 mt-4" data-aos="zoom-in" >
               <span className="oldPrice line-through text-gray-500 text-[20px] font-[600]]">
               &#8377; 100.00
               </span>
@@ -51,17 +62,17 @@ const ProductDetailsComponent = () => {
             </div>
 
             {/*small description of product */}
-            <p className="mt-3 pr-5 mb-5 !text-[14px]">
+            <p className="mt-3 pr-5 mb-5 !text-[14px]" data-aos="zoom-in" >
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Distinctio aliquam tempora dolores explicabo officiis rerum rem
               beatae dolore porro omnis non provident maiores, praesentium
               deleniti earum aperiam corrupti soluta debitis!
             </p>
 
-            <Divider variant="middle" className="!mb-5" />
+            <Divider variant="middle" className="!mb-5" data-aos="zoom-in" />
 
             {/* different box slots */}
-            <div className="flex productContent items-center gap-3">
+            <div className="flex productContent items-center gap-3" >
               <span className="text-[12px]">Box Slots: </span>
               <div className="flex items-center gap-2 actions flex-wrap overflow-hidden">
                 <Button
@@ -187,7 +198,8 @@ const ProductDetailsComponent = () => {
             </div>
 
             <Divider variant="middle" className="!mt-5" />
-       
+   
+
     </>
   )
 }
